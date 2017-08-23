@@ -1,0 +1,7 @@
+--- 
+- name: Prepare timezone file
+  template:
+    src: timezone
+    dest: /etc/timezone
+- name: Reconfigure timezone
+  command: /usr/sbin/dpkg-reconfigure -f noninteractive tzdata
