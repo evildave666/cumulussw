@@ -1,2 +1,6 @@
 ---
 # handlers file for cumulussw
+
+- name: reconfigure timezone
+  command: /usr/sbin/dpkg-reconfigure -f noninteractive tzdata
+
