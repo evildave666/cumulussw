@@ -1,3 +1,5 @@
 ---
 # vars file for cumulussw
 timezone: Asia/Tokyo
+nameserver1: 8.8.8.8
+nameserver2: 8.8.4.4

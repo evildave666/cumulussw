@@ -1,4 +1,5 @@
 ---
 # tasks file for cumulussw
-- include: mgmtvrf.yml
 - include: timezone.yml
+- include: resolvconf.yml
+- include: mgmtvrf.yml

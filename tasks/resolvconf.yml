@@ -1,0 +1,6 @@
+--- 
+- name: Prepare resolv.conf file if none exists
+  template:
+    src: resolv.conf.j2
+    dest: /etc/resolv.conf
+    force: no
