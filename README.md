@@ -14,6 +14,7 @@ Role Variables
 timezone: default Asia/Tokyo
 
 nameserver1: default 8.8.8.8
+
 nameserver2: default 8.8.4.4
 
 Dependencies
