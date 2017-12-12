@@ -11,10 +11,10 @@ N/A
 Role Variables
 --------------
 
-Default timezone is Asia/Tokyo, settable via the timezone variable.
+timezone: default Asia/Tokyo
 
-Default nameservers are Google Public DNS, settable via the nameserver1 and
-nameserver2 variables.
+nameserver1: default 8.8.8.8
+nameserver2: default 8.8.4.4
 
 Dependencies
 ------------
