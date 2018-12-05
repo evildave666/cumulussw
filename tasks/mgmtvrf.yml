@@ -1,9 +1,9 @@
 --- 
-#- name: Add management vrf
-#  nclu:
-#    commands:
-#      - add vrf mgmt
-#    commit: true
+- name: Add management vrf
+  nclu:
+    commands:
+      - add vrf mgmt
+    commit: true
 - name: Stop/Disable ntp on default vrf
   systemd:
     state: stopped
