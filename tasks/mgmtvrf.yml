@@ -1,9 +1,9 @@
 --- 
-- name: Add management vrf
-  nclu:
-    commands:
-      - add vrf mgmt
-    commit: true
+#- name: Add management vrf
+#  nclu:
+#    commands:
+#      - add vrf mgmt
+#    commit: true
 - name: Stop/Disable ntp on default vrf
   systemd:
     state: stopped
@@ -14,13 +14,15 @@
     state: started
     enabled: yes
     name: ntp@mgmt
-- name: Stop/Disable snmpd on default vrf
-  systemd:
-    state: stopped
-    enabled: no
-    name: snmpd.service
-- name: Start/Enable snmpd on mgmt vrf
-  systemd:
-    state: started
-    enabled: yes
-    name: snmpd@mgmt
+# As of 3.6 snmpd is vrf-aware and no longer needs to be explicitly started
+# in the management vrf
+#- name: Stop/Disable snmpd on default vrf
+#  systemd:
+#    state: stopped
+#    enabled: no
+#    name: snmpd.service
+#- name: Start/Enable snmpd on mgmt vrf
+#  systemd:
+#    state: started
+#    enabled: yes
+#    name: snmpd@mgmt
